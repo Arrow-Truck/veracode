@@ -32,7 +32,7 @@ jobs:
       - name: Run Veracode SCA
         env:
           SRCCLR_API_TOKEN: ${{ secrets.VERACODE_AGENT_TOKEN }}
-          SRCCLR_USE_DOTNET_EXEC: 'DOTNET'
+          USE_DOTNET_EXEC: 'DOTNET'
         uses: veracode/veracode-sca@v2.1.9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
