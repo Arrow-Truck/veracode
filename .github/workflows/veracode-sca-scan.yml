@@ -32,7 +32,8 @@ jobs:
       - name: Run Veracode SCA
         env:
           SRCCLR_API_TOKEN: ${{ secrets.VERACODE_AGENT_TOKEN }}
-          USE_DOTNET_EXEC: 'MSBUILD'
+#          USE_DOTNET_EXEC: 'MSBUILD'
+          SKIP_DOTNET_RESTORE: true  
         uses: veracode/veracode-sca@v2.1.9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
